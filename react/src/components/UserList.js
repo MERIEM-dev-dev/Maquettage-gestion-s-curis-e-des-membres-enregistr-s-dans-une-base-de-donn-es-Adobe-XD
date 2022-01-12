@@ -84,13 +84,13 @@ const UserList = () => {
               <td>{user_email}</td>
               <td>
                 <button
-                  className="btn default-btn"
+                  className="btn edit-btn"
                   onClick={() => enableEdit(id, user_name, user_email)}
                 >
                   Edit
                 </button>
                 <button
-                  className="btn red-btn"
+                  className="btn delete-btn"
                   onClick={() => deleteConfirm(id)}
                 >
                   Delete
