@@ -23,7 +23,7 @@ function Home() {
                 <div className="userInfo">
                     <h1>{theUser.name}</h1>
                     <div className="_email"><span>{theUser.email}</span></div>
-                    <button onClick={logoutUser}>Logout</button>
+                    <button onClick={logoutUser}>Logout  <i class="fas fa-sign-out-alt"></i> </button>
                 </div>
                 <Provider value={data}>
                     <div className="App">
