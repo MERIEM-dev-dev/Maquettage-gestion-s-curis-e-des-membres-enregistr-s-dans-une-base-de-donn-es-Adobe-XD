@@ -23,8 +23,9 @@ const Form = () => {
     <div>
     {/* Button trigger modal */}
     <button type="button" id="buttn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Add new
-    </button>
+    <i class="fas fa-user-plus"></i> Add new</button>
+    
+    
     {/* Modal */}
     <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div className="modal-dialog">
@@ -58,7 +59,7 @@ const Form = () => {
         </form>
           </div>
           <div className="modal-footer">
-            <button type="button" id="buttn" data-bs-dismiss="modal">Close</button>
+            <button type="button" id="buttn1" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
