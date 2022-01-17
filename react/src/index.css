@@ -90,7 +90,6 @@
 
 ._navBtn button{
   background: #ebd9bc;
-  /* #ebd9bc */
   color: #ffffff;
   width: 100%; 
 }
@@ -162,7 +161,6 @@ body {
   background-size: cover;
   background-repeat:no-repeat ;
   background-attachment: fixed;
-  /* padding: 5px; */
 }
 
 .App {
@@ -185,7 +183,6 @@ body {
 }
 
 .wrapper {
-  /* display: flex; */
   flex-wrap: wrap;
   justify-content: center;
   padding: 80px 0;
@@ -277,8 +274,6 @@ body {
 }
 .red-btn,
 .green-btn{
-  /* background: #059669;
-  color: #ffffff; */
   border: 3px solid #9d8b6e;
   color: #9d8b6e;
   margin: 0px 5px;
@@ -289,11 +284,7 @@ body {
   background-color: #9d8b6e;
 }
 
-/* .red-btn{
-  background: #DC2626;
-} */
 .default-btn{
-  /* background: #E5E7EB; */
   background-color: #1d2737;
   color: #ebd9bc;
   border: 1px solid #ebd9bc;
@@ -309,11 +300,10 @@ body {
 }
 
 #buttn{
-  /* margin-right: -165px; */
-  margin-left: 386px;
   background: #9d8b6e;
   color: #ebd9bc;
   padding: 10px 20px;
+  margin: 5px auto;
   font-size: 16px;
   border: 5px solid rgba(0, 0, 0, .1);
   outline: none;
@@ -321,15 +311,8 @@ body {
   outline: none;
   cursor: pointer;
   transition: background .3s;
-  /* align-items: center;
-  justify-content: center;
-  display: center;
-  z-index: +2; */
-  /* text-align: center;
-  margin-top: -45px;  */
-
-  DISPLAY: FLEX;
-    margin-top: -66px;
+  display: flex;
+  margin-top: -66px;
 }
 
 #buttn1{
@@ -370,8 +353,8 @@ table.table td, table.table th {
 
 table.table tr:nth-child(even){background-color: hsl(39, 62%, 93%);    color: #1d2737;}
 table.table tr:nth-child(odd){background-color: #ebd9bc;    color: #1d2737;}
-table.table tr:hover {    color: #ebd9bc;
-  background-color: #1b2432;}
+table.table tr:hover {  background-color: #1b2432;  color: #ebd9bc; }
+  
 
 table.table th {
   padding-top: 12px;
@@ -423,7 +406,7 @@ button.btn.edit-btn:hover {
   box-shadow: 0 0 0 0.25rem rgba(235, 217, 188, 0);
 }
 
-@media screen and (max-width:360px){
+/* @media screen and (max-width:360px){
   table thead{
     display: none;
   }
@@ -438,25 +421,35 @@ button.btn.edit-btn:hover {
     text-align: right;
     padding-left: 50%;
     position: relative;
-    /* grid-template-columns: repeat(auto-fit, 20rem); */
   }
-}
+} */
 
-@media screen and (max-width:375px) and (min-width:200px){
+/* @media screen and (max-width:768px){
   table thead{
     display: none;
   }
   table tbody, table tbody tr{
-    display: block; 
+    display: flex; 
     width: 100%;
   }
   table tr{
     margin-bottom: 15px;
+    align-items: center;
   }
   table tbody tr td{
     text-align: right;
-    padding-left: 50%;
-    position: relative;
+    /* padding-left: 50%; 
+    /* padding-right: 50%;
+
   }
+  #buttn{
+    margin-left: 112px;
+  }
+} */
+
+
+table.table th, table.table tr {
+  text-align: center;
+  vertical-align: middle;
 }
 
