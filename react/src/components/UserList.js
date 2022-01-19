@@ -43,30 +43,30 @@ const UserList = () => {
     <table className="table">
     <thead>
       <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Action</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
     {users.map(({ id, user_name, user_email, isEditing }) => {
           return isEditing === true ? (
             <tr key={id}>
-              <td scope="row">
+              <td>
                 <input
                   type="text"
                   defaultValue={user_name}
                   onChange={(e) => updateNewData(e, "user_name")}
                 />
               </td>
-              <td scope="row">
+              <td>
                 <input
                   type="email"
                   defaultValue={user_email}
                   onChange={(e) => updateNewData(e, "user_email")}
                 />
               </td>
-              <td scope="row">
+              <td>
                 <button className="btn green-btn" onClick={() => saveBtn()}>
                   Save
                 </button>

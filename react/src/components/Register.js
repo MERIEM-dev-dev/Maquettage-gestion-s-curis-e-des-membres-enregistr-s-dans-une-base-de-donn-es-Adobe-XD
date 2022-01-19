@@ -1,5 +1,6 @@
 import React, {useContext,useState} from 'react'
 import {MyContext} from '../contexts/MyContext'
+import image from '../person.svg'
 
 function Register(){
     const {toggleNav,registerUser} = useContext(MyContext);
@@ -11,6 +12,7 @@ function Register(){
         },
         errorMsg:'',
         successMsg:'',
+        file:null
     }
     const [state,setState] = useState(initialState);
 
@@ -43,6 +45,17 @@ function Register(){
             }
         });
     }
+
+    const fileOnchange2=event=>{
+        var r=new FileReader();
+        r.onload=(e)=>{
+            setState({
+                ...state,
+                file:e.target.result
+            });
+        }
+        r.readAsDataURL(event.target.files[0]);
+    }
     
     // Show Message on Success or Error
     let successMsg = '';
@@ -56,6 +69,14 @@ function Register(){
 
     return(  
         <div className="_loginRegister">
+                    <div className="upload">
+            <img src={state.file ? state.file : image} alt=""/>
+        
+        <div className="round">
+          <input type="file" onChange={fileOnchange2} />
+          <i className="fa fa-camera" style={{color: '#fff'}} />
+        </div>
+        </div>
             <h1>Sign Up</h1>
             <form onSubmit={submitForm} noValidate>
                 <div className="form-control">

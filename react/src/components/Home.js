@@ -32,6 +32,7 @@ function Home() {
                             <section className="left-side" className="g-col-6">
                                 <Form />
                             </section>
+                            <br/>
                             <section className="right-side" className="g-col-6">
                                 <UserList />
                             </section>

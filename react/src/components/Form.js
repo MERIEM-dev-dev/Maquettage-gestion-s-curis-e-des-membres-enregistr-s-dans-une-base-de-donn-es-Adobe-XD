@@ -20,7 +20,8 @@ const Form = () => {
   };
 
     return (
-    <div>
+    <div style={{textAlign: 'center'}}>
+
     {/* Button trigger modal */}
     <button type="button" id="buttn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     <i class="fas fa-user-plus"></i> Add new</button>

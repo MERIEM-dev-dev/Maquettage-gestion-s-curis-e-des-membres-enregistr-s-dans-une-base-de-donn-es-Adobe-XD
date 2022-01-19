@@ -1,5 +1,6 @@
 import React, {useContext, useState} from 'react'
 import {MyContext} from '../contexts/MyContext'
+import image from '../person.svg'
 
 function Login(){
 
@@ -12,6 +13,7 @@ function Login(){
         },
         errorMsg:'',
         successMsg:'',
+        file:null
     }
 
     const [state,setState] = useState(initialState);
@@ -25,6 +27,17 @@ function Login(){
                 [e.target.name]:e.target.value
             }
         });
+    }
+
+    const fileOnchange2=event=>{
+        var r=new FileReader();
+        r.onload=(e)=>{
+            setState({
+                ...state,
+                file:e.target.result
+            });
+        }
+        r.readAsDataURL(event.target.files[0]);
     }
 
     // On Submit Login Form
@@ -61,6 +74,14 @@ function Login(){
 
     return(   
         <div className="_loginRegister">
+        <div className="upload">
+            <img src={state.file ? state.file : image} alt=""/>
+        
+        <div className="round">
+          <input type="file" onChange={fileOnchange2} />
+          <i className="fa fa-camera" style={{color: '#fff'}} />
+        </div>
+        </div>
             <h1>Login</h1>
             <form  onSubmit={submitForm} noValidate>
                 <div className="form-control">
